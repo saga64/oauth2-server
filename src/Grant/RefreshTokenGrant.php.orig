@@ -36,6 +36,8 @@ class RefreshTokenGrant extends AbstractGrant
     protected $refreshTokenTTL = 604800;
 
     /**
+<<<<<<< HEAD
+=======
      * Rotate token (default = true)
      *
      * @var integer
@@ -51,6 +53,7 @@ class RefreshTokenGrant extends AbstractGrant
     protected $requireClientSecret = false;
 
     /**
+>>>>>>> 7c2e23d... Remove client secret check for PasswordGrant
      * Set the TTL of the refresh token
      *
      * @param int $refreshTokenTTL
