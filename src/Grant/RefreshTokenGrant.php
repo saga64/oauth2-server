@@ -82,16 +82,10 @@ class RefreshTokenGrant extends AbstractGrant
             throw new Exception\InvalidRequestException('client_id');
         }
 
-        $clientSecret = $this->server->getRequest()->request->get('client_secret',
-            $this->server->getRequest()->getPassword());
-        if (is_null($clientSecret)) {
-            throw new Exception\InvalidRequestException('client_secret');
-        }
-
         // Validate client ID and client secret
         $client = $this->server->getClientStorage()->get(
             $clientId,
-            $clientSecret,
+            null,
             null,
             $this->getIdentifier()
         );
